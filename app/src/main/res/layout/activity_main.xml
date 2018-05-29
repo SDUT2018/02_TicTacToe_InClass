@@ -1,19 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TableLayout
+        android:id="@+id/board"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="0"
+                />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="1"
+                />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="2"
+                />
+        </TableRow>
+
+
+        <TableRow>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="3"
+                />
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="4"
+                />
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="5"
+                />
+        </TableRow>
+
+
+        <TableRow>
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="6"
+                />
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="7"
+                />
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:textSize="50sp"
+                android:onClick="pressedSquare"
+                android:tag="8"
+                />
+        </TableRow>
+
+    </TableLayout>
+
     <TextView
+        android:id="@+id/game_state_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:text="@string/x_turn"
+        android:layout_above="@id/board"
+        android:textColor="@color/text"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_game"
+        android:layout_below="@id/board"
+        android:layout_alignRight="@id/board"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:onClick="pressedNewGame"/>
+
+</RelativeLayout>
